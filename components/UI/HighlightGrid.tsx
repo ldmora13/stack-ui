@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { cn } from "../../lib/util";
+import { cn } from "@/lib/utils";
 
 /**
  * Highlight Grid
@@ -59,13 +59,13 @@ interface GridCell {
 }
 
 const DEFAULT_COLORS = [
-  "#E24E1B",
-  "#4381C1",
-  "#F79824",
-  "#04A777",
-  "#5B8C5A",
-  "#2176FF",
-  "#818D92",
+  "#ff7d00",
+  "#663399",
+  "#efd81d",
+  "#149eca",
+  "#000000",
+  "#36b7f0",
+  "#0ae448",
   "#22AAA1",
 ];
 
@@ -178,7 +178,7 @@ export function HighlightGrid({
         className,
       )}
     >
-      <p className="text-2xl font-mono text-white -mt-8 mb-8">With all</p>
+      <p className="text-2xl font-mono text-white -mt-8 mb-8">With all technologies</p>
       <div
         ref={gridRef}
         className="relative mx-auto flex h-[60%] w-[90%] flex-col border border-black/15 dark:border-white/20 rounded-2xl"
@@ -227,7 +227,7 @@ export function HighlightGrid({
                 >
                   <p
                     className={cn(
-                      "relative z-[2] font-mono text-[13px] font-medium uppercase transition-colors duration-200",
+                      "relative z-2 font-mono text-[13px] font-medium uppercase transition-colors duration-200",
                       isActive ? "text-white" : "text-neutral-600 dark:text-white/70",
                     )}
                   >

@@ -3,7 +3,7 @@
 import { type ReactNode, useEffect, useMemo, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
-import { cn } from "../lib/util";
+import { cn } from "@/lib/utils";
 
 type TextMorphProps = {
   words?: string[];
