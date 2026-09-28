@@ -1,7 +1,7 @@
 'use client';
 
 import * as React from 'react';
-import { RadialNav } from './UI/Radial-nav-icon';
+import { RadialNav } from './ui/Radial-nav-icon';
 import { Bot, Code, Frame } from 'lucide-react';
 
 const ITEMS = [
