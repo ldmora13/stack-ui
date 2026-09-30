@@ -178,7 +178,7 @@ export function HighlightGrid({
         className,
       )}
     >
-      <p className="text-2xl font-mono text-white -mt-8 mb-8">With all technologies</p>
+      <p className="text-2xl font-mono text-white -mt-8 mb-8">For every stack</p>
       <div
         ref={gridRef}
         className="relative mx-auto flex h-[60%] w-[90%] flex-col border border-black/15 dark:border-white/20 rounded-2xl"

@@ -52,14 +52,14 @@ export default function Home() {
           </div>
           <div className="mt-8 grid w-full grid-cols-1 items-stretch gap-4 xl:grid-cols-[minmax(0,280px)_minmax(0,1fr)_minmax(0,280px)]">
             <div className="flex min-h-90 w-full flex-col items-center justify-center gap-y-10 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 shadow-lg backdrop-blur-xs p-6 sm:p-8">
-              <h2 className="text-center font-mono text-xl text-white sm:text-2xl">The perfect routing</h2>
+              <h2 className="text-center font-mono text-xl text-white sm:text-2xl">The perfect route</h2>
               <RadialNavDemo />
             </div>
             <Grid/>
             <div className="flex min-h-90 w-full flex-col items-center justify-center gap-y-10 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 shadow-lg backdrop-blur-xs p-6 sm:p-8">
               <div className="flex flex-col items-center justify-center gap-y-2">
-                <h2 className="font-mono text-xl text-white sm:text-2xl">For</h2>
-                <p className="font-mono text-xl text-white sm:text-2xl">Every</p>
+                <p className="font-mono text-xl text-white sm:text-2xl">For every</p>
+                <p className="font-mono text-xl text-white sm:text-2xl">Builder</p>
               </div>
               <LoopingWordsDemo />
             </div>
