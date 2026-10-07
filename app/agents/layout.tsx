@@ -23,7 +23,7 @@ export default function AgentsLayout({
             { label: "Agents", href: "/agents/agents" },
             { label: "Skills", href: "/agents/skills" },
             { label: "MCPs", href: "/agents/mcps" },
-            { label: "Design Systems", href: "/agents/designs" },
+            { label: "Design Systems", href: "/agents/design" },
             { label: "Prompts", href: "/agents/prompts" },
           ]}
           label="Agents"
