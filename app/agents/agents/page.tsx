@@ -1,21 +1,47 @@
 import Link from 'next/link';
-import FrameworkAgnostic from '@/components/Frameworkagnostic';
+
+import { PageSectionsNav, type PageSection } from '@/components/PageSectionsNav';
+
+const sections: PageSection[] = [
+    { id: 'overview', label: 'Overview' },
+    { id: 'opendesign', label: 'OpenDesign' },
+    { id: 'stitch', label: 'Stitch' },
+    { id: 'swishy', label: 'Swishy' },
+    { id: 'replit', label: 'Replit' },
+    { id: 'relume', label: 'Relume' },
+    { id: 'framer', label: 'Framer' },
+];
 
 export default function Home() {
     return (
-        <main className="min-h-screen overflow-x-hidden bg-[#090909] font-sans text-[#f2f0eb]">
-            <div className="mx-auto flex flex-col min-h-screen w-full max-w-375 gap-5 px-3 py-3 sm:px-5 lg:px-7">
+        <main className="min-h-screen overflow-x-clip bg-[#090909] font-sans text-[#f2f0eb]">
+            <div className="mx-auto grid min-h-screen w-full max-w-375 gap-5 px-3 py-3 sm:px-5 lg:grid-cols-[minmax(0,1fr)_12rem] lg:px-7">
                 <section className="min-w-0 flex-1 rounded-xl border border-white/10 bg-[#111111] px-5 py-7 sm:px-8 lg:px-12 lg:py-10">
-                     <div className="max-w-4xl">
+                     <div id="overview" className="max-w-4xl">
                         <h1 className="mt-5 text-2xl font-semibold tracking-tight sm:text-3xl">UI / Web Design AI</h1>
                         <p className="mt-4 max-w-4xl text-lg leading-8 text-white/60">
                             The coding agents listed here are focused on create UI and web design experiences. They can assist developers in generating code, designing interfaces, and enhancing the overall user experience of applications.
                         </p>
                     </div>
-                    <div className="flex items-center justify-center mt-10">
-                        <FrameworkAgnostic />
+                    
+                    <div id="opendesign" className="mt-12 scroll-mt-6 grid max-w-5xl h-auto md:max-h-75 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-2">
+                        <div className="bg-[#171717] p-5">
+                            <div className="flex items-center justify-between gap-4">
+                                <p className="mt-2 text-xl font-semibold uppercase tracking-[0.12em]">OpenDesign</p>
+                                <div className="bg-[#171717] rounded-lg px-3 py-1 text-sm font-semibold text-[#01fc4c] border border-white/10">
+                                    <p>FREE</p>
+                                </div>
+                            </div>
+                            <p className='mt-10 text-md text-white/80'>OpenDesign is a open-source AI design workspace. It transforms a local coding agent into a design engine featuring composable skills and portable DESIGN.md systems.</p>
+                            <p className='mt-2 text-sm text-white/50'>OpenDesign is the open-source and local alternative to Claude Design.</p>
+                        </div>
+                        <Link href="https://open-design.ai/" target="_blank" rel="noopener noreferrer">
+                            <img alt="OpenDesign" src="https://open-design.ai/hero-product-1280.webp?v=3"
+                                    className="w-full object-cover" />
+                        </Link>
                     </div>
-                    <div className="mt-12 grid max-w-5xl h-auto md:max-h-75 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-2">
+
+                    <div id="stitch" className="mt-20 scroll-mt-6 grid max-w-5xl h-auto md:max-h-75 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-2">
                         <div className="bg-[#171717] p-5">
                             <div className="flex items-center justify-between gap-4">
                                 <p className="mt-2 text-xl font-semibold uppercase tracking-[0.12em]">Stitch <span className='text-sm text-white/50'>By Google</span></p>
@@ -30,22 +56,7 @@ export default function Home() {
                                     className="w-full object-cover" />
                         </Link>
                     </div>
-                    <div className="mt-12 grid max-w-5xl h-auto md:max-h-75 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-2">
-                        <div className="bg-[#171717] p-5">
-                           <div className="flex items-center justify-between gap-4">
-                                <p className="mt-2 text-xl font-semibold uppercase tracking-[0.12em]">Manus</p>
-                                <div className="bg-[#171717] rounded-lg px-3 py-1 text-sm font-semibold text-[#fc4c01] border border-white/10">
-                                    <p>PAY</p>
-                                </div>
-                            </div>
-                            <p className='mt-10 text-md text-white/80'>Manus AI is an autonomous general AI agent designed to complete tasks and deliver results. Unlike traditional chatbots that simply answer questions, Manus AI takes action. Think of Manus AI as a virtual colleague with its own computer,capable of planning, executing, and delivering complete work products from start to finish.</p>
-                        </div>
-                        <Link href="https://manus.im/" target="_blank" rel="noopener noreferrer">
-                            <img alt="Manus.im" src="https://files.manuscdn.com/assets/dashboard/materials/2026/09/28/8b77f84af55a1ec5d57729fe4d2a795e5d8fd154e01bff85ab8111edd5b3bb32.webp"
-                                    className="mt-5 w-full object-cover" />
-                        </Link>
-                    </div>
-                    <div className="mt-12 grid max-w-5xl h-auto md:max-h-75 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-2">
+                    <div id="swishy" className="mt-12 scroll-mt-6 grid max-w-5xl h-auto md:max-h-75 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-2">
                         <div className="bg-[#171717] p-5">
                             <div className="flex items-center justify-between gap-4">
                                 <p className="mt-2 text-xl font-semibold uppercase tracking-[0.12em]">Swishy</p>
@@ -59,7 +70,7 @@ export default function Home() {
                             <img alt="Swishy ai" src="https://swishy.gitbook.io/docs/~gitbook/image?url=https%3A%2F%2F1519617812-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FSfR9NohQoylP6cOmxu51%252Fuploads%252F76XeqguXDiYVSUMTWhg1%252FScreenshot%25202026-02-01%2520at%25204.24.22%25E2%2580%25AFPM.png%3Falt%3Dmedia%26token%3D02436fe7-9c65-4143-89ac-58f20d39de94&width=400&dpr=3&quality=100&sign=47f452c8b926f48db2e366b6ceafc9c1&sv=3" />
                         </Link>
                     </div>
-                    <div className="mt-12 grid max-w-5xl h-auto md:max-h-75 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-2">
+                    <div id="replit" className="mt-12 scroll-mt-6 grid max-w-5xl h-auto md:max-h-75 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-2">
                         <div className="bg-[#171717] p-5">
                             <div className="flex items-center justify-between gap-4">
                                 <p className="mt-2 text-xl font-semibold uppercase tracking-[0.12em]">Replit</p>
@@ -73,7 +84,7 @@ export default function Home() {
                             <img className="w-full h-75 object-cover" alt="Replit" src="https://mintcdn.com/replit/teDUL4A-lNO7dv1O/images/chat/start-new-conversation-home-sanitized-neutral.jpg?fit=max&auto=format&n=teDUL4A-lNO7dv1O&q=85&s=cf93f549696aff0eab748dd953aea0b6" />
                         </Link>
                     </div>
-                    <div className="mt-12 grid max-w-5xl h-auto md:max-h-75 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-2">
+                    <div id="relume" className="mt-12 scroll-mt-6 grid max-w-5xl h-auto md:max-h-75 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-2">
                         <div className="bg-[#171717] p-5">
                             <div className="flex items-center justify-between gap-4">
                                 <p className="mt-2 text-xl font-semibold uppercase tracking-[0.12em]">Relume</p>
@@ -87,7 +98,7 @@ export default function Home() {
                             <img alt="Relume AI" src="https://miro.medium.com/v2/resize:fit:1100/format:webp/0*9lmYl6bRuIk_sDKH.png" />
                         </Link>
                     </div>
-                    <div className="mt-12 grid max-w-5xl h-auto md:max-h-75 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-2">
+                    <div id="framer" className="mt-12 scroll-mt-6 grid max-w-5xl h-auto md:max-h-75 gap-px overflow-hidden rounded-xl border border-white/10 bg-white/10 md:grid-cols-2">
                         <div className="bg-[#171717] p-5">
                             <div className="flex items-center justify-between gap-4">
                                 <p className="mt-2 text-xl font-semibold uppercase tracking-[0.12em]">Framer</p>
@@ -98,10 +109,11 @@ export default function Home() {
                             <p className='mt-10 text-md text-white/80'>Framer AI is an AI-powered design engine and canvas agent natively integrated into the Framer website builder. It is designed for designers and teams who want to transition from text prompts or concept boundaries to fully editable, semantic web layers, interactive components, and operational CMS setups without writing manual code.</p>
                         </div>
                         <Link href="https://www.framer.com/" target="_blank" rel="noopener noreferrer">
-                            <img alt="Relume AI" src="https://framerusercontent.com/images/7eUiPQ3PJJnvU7zXf1KCug50q6A.png?width=2400&height=1520" />
+                            <img alt="Framer" src="https://framerusercontent.com/images/7eUiPQ3PJJnvU7zXf1KCug50q6A.png?width=2400&height=1520" />
                         </Link>
                     </div>
                 </section>
+                <PageSectionsNav sections={sections} />
             </div>
         </main>
     )
